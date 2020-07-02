@@ -5,7 +5,6 @@ const carouselNavigationModSliders = document.querySelectorAll(`.js-carousel-nav
 let swiperList = [];
 
 const storiesModeSettings2 = {
-  // loop: true,
   spaceBetween: 80,
   slidesPerView: 1,
   centeredSlides: true,

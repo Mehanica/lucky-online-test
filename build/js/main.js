@@ -232,6 +232,7 @@ var changeFields = function changeFields(newReqiredFields) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils */ "./js/modules/utils.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_utils__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _form_select_category__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../form/select-category */ "./js/modules/form/select-category.js");
 
 
@@ -529,130 +530,102 @@ window.addEventListener("resize", resizeSwiper);
 /*!*****************************!*\
   !*** ./js/modules/utils.js ***!
   \*****************************/
-/*! exports provided: disableScrolling, enableScrolling, getParent, returnParent, onWindowScrollAnimation, createElement, renderElement, RenderPosition */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "disableScrolling", function() { return disableScrolling; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "enableScrolling", function() { return enableScrolling; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getParent", function() { return getParent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "returnParent", function() { return returnParent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onWindowScrollAnimation", function() { return onWindowScrollAnimation; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createElement", function() { return createElement; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderElement", function() { return renderElement; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RenderPosition", function() { return RenderPosition; });
-var body = document.querySelector("body");
-
-var getScrollbarWidth = function getScrollbarWidth() {
-  var outer = document.createElement("div");
-  outer.style.visibility = "hidden";
-  outer.style.overflow = "scroll";
-  outer.style.msOverflowStyle = "scrollbar";
-  body.appendChild(outer);
-  var inner = document.createElement("div");
-  outer.appendChild(inner);
-  var scrollbarWidth = outer.offsetWidth - inner.offsetWidth;
-  outer.parentNode.removeChild(outer);
-  return scrollbarWidth;
-};
-
-var getBodyScrollTop = function getBodyScrollTop() {
-  return self.pageYOffset || document.documentElement && document.documentElement.ScrollTop || document.body && document.body.scrollTop;
-};
-
-var disableScrolling = function disableScrolling() {
-  var scrollWidth = getScrollbarWidth();
-  body.setAttribute("style", "padding-right: " + scrollWidth + "px;");
-  body.dataset.scrollY = "".concat(getBodyScrollTop());
-  body.style.top = "-".concat(document.body.dataset.scrollY, "px");
-  body.classList.add("scroll-lock");
-};
-
-var enableScrolling = function enableScrolling() {
-  body.removeAttribute("style");
-  body.classList.remove("scroll-lock");
-  window.scrollTo(0, +document.body.dataset.scrollY);
-};
-
-var getParent = function getParent(el, cssClass) {
-  var flag = false;
-  var element = el;
-  var cls = cssClass;
-
-  while (!element.classList.contains(cls)) {
-    element = element.parentElement;
-
-    if (!element) {
-      flag = true;
-      break;
-    }
-  }
-
-  return flag;
-};
-
-var returnParent = function returnParent(el, cssClass) {
-  var element = el;
-  var cls = cssClass;
-
-  while (!element.classList.contains(cls) && !element.matches(cls)) {
-    element = element.parentElement;
-
-    if (!element) {
-      break;
-    }
-  }
-
-  return element;
-};
-
-var onWindowScrollAnimation = function onWindowScrollAnimation(block, height, fn, fn2) {
-  window.addEventListener("scroll", function () {
-    if (block) {
-      var offset = window.pageYOffset;
-      var topSkillsContainer = block.getBoundingClientRect().top + offset - height;
-
-      if (offset >= topSkillsContainer) {
-        fn();
-      } else if (fn2) {
-        fn2();
-      }
-    }
-  });
-};
-
-var RenderPosition = {
-  AFTERBEGIN: "prepend",
-  AFTEREND: "afterend",
-  BEFOREEND: "beforeend"
-};
-
-var createElement = function createElement(template) {
-  var newElement = document.createElement("div");
-  newElement.innerHTML = template;
-  return newElement.firstChild;
-};
-
-var renderElement = function renderElement(container, component) {
-  var place = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : RenderPosition.BEFOREEND;
-
-  switch (place) {
-    case RenderPosition.AFTERBEGIN:
-      container.prepend(component);
-      break;
-
-    case RenderPosition.AFTEREND:
-      container.after(component);
-      break;
-
-    case RenderPosition.BEFOREEND:
-      container.append(component);
-      break;
-  }
-};
-
-
+// const body = document.querySelector(`body`);
+// const getScrollbarWidth = () => {
+//   const outer = document.createElement(`div`);
+//   outer.style.visibility = `hidden`;
+//   outer.style.overflow = `scroll`;
+//   outer.style.msOverflowStyle = `scrollbar`;
+//   body.appendChild(outer);
+//   const inner = document.createElement(`div`);
+//   outer.appendChild(inner);
+//   const scrollbarWidth = (outer.offsetWidth - inner.offsetWidth);
+//   outer.parentNode.removeChild(outer);
+//   return scrollbarWidth;
+// };
+// const getBodyScrollTop = () => {
+//   return (
+//     self.pageYOffset ||
+//     (document.documentElement && document.documentElement.ScrollTop) ||
+//     (document.body && document.body.scrollTop)
+//   );
+// };
+// const disableScrolling = () => {
+//   const scrollWidth = getScrollbarWidth();
+//   body.setAttribute(`style`, `padding-right: ` + scrollWidth + `px;`);
+//   body.dataset.scrollY = `${getBodyScrollTop()}`;
+//   body.style.top = `-${document.body.dataset.scrollY}px`;
+//   body.classList.add(`scroll-lock`);
+// };
+// const enableScrolling = () =>{
+//   body.removeAttribute(`style`);
+//   body.classList.remove(`scroll-lock`);
+//   window.scrollTo(0, +document.body.dataset.scrollY);
+// };
+// const getParent = (el, cssClass) => {
+//   let flag = false;
+//   let element = el;
+//   const cls = cssClass;
+//   while (!element.classList.contains(cls)) {
+//     element = element.parentElement;
+//     if (!element) {
+//       flag = true;
+//       break;
+//     }
+//   }
+//   return flag;
+// };
+// const returnParent = (el, cssClass) => {
+//   let element = el;
+//   const cls = cssClass;
+//   while (!element.classList.contains(cls) && !element.matches(cls)) {
+//     element = element.parentElement;
+//     if (!element) {
+//       break;
+//     }
+//   }
+//   return element;
+// };
+// const onWindowScrollAnimation = (block, height, fn, fn2) => {
+//   window.addEventListener(`scroll`, () => {
+//     if (block) {
+//       const offset = window.pageYOffset;
+//       const topSkillsContainer = block.getBoundingClientRect().top + offset - height;
+//       if (offset >= topSkillsContainer) {
+//         fn();
+//       } else if (fn2) {
+//         fn2();
+//       }
+//     }
+//   });
+// };
+// const RenderPosition = {
+//   AFTERBEGIN: `prepend`,
+//   AFTEREND: `afterend`,
+//   BEFOREEND: `beforeend`
+// };
+// const createElement = (template) => {
+//   const newElement = document.createElement(`div`);
+//   newElement.innerHTML = template;
+//   return newElement.firstChild;
+// };
+// const renderElement = (container, component, place = RenderPosition.BEFOREEND) => {
+//   switch (place) {
+//     case RenderPosition.AFTERBEGIN:
+//       container.prepend(component);
+//       break;
+//     case RenderPosition.AFTEREND:
+//       container.after(component);
+//       break;
+//     case RenderPosition.BEFOREEND:
+//       container.append(component);
+//       break;
+//   }
+// };
+// export {disableScrolling, enableScrolling, getParent, returnParent, onWindowScrollAnimation, createElement, renderElement, RenderPosition};
 
 /***/ }),
 
