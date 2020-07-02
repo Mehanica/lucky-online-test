@@ -1,0 +1,38 @@
+include ../global/mixins
+include ../global/header
+include ../global/footer
+
+block data
+block variables
+
+doctype html
+html(lang="ru")
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(name="description", content="GMS CLINIC")
+    link(rel='preload', href='fonts/gotham-pro-bold.woff2', as='font', crossorigin='anonymous')
+    link(rel='preload', href='fonts/gotham-pro-regular.woff2', as='font', crossorigin='anonymous')
+    link(rel="stylesheet", href="css/style.min.css")
+
+  body
+    +sprite()
+    .wrapper#page
+      if (header)
+        +header(headerMod)
+
+      block main
+
+      if (footer)
+        +footer(footerMod)
+
+    block modals
+
+    script(src="js/vendor.min.js")
+    //- script(src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+    //- script(src="https://yastatic.net/share2/share.js")
+    //- script(src="https://yastatic.net/share2/share.js" async="async")
+
+    script(src="js/main.min.js")

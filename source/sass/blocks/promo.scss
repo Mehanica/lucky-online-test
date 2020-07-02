@@ -1,0 +1,140 @@
+.promo {
+  padding: 32px 0;
+  background-color: $color-light-blue-bg;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+
+    max-width: 1136px;
+    height: 232px;
+    padding: 0 55px;
+
+    background-color: $color-white;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px $color-opacity-black;
+    overflow: hidden;
+
+    @media (max-width: $viewport--lg) {
+      flex-direction: column;
+      height: 100%;
+      max-width: 360px;
+      padding: 29px 40px;
+    }
+
+    @media (max-width: $viewport--md) {
+      min-width: 320px;
+      width: 100%;
+    }
+  }
+
+  & .count-down-clock {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $viewport--lg) {
+      order: 1;
+    }
+  }
+
+  & .count-down-clock h2 {
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  & .count-down-clock__clockdiv {
+    padding-right: 0;
+    min-width: 278px;
+
+    @media (max-width: $viewport--lg) {
+      padding: 0 12px 0 2px;
+    }
+  }
+
+  &__center-block {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 41.2%;
+    min-width: 423px;
+    height: 100%;
+    margin-left: 3.1%;
+    margin-right: 1.5%;
+
+    @media (max-width: $viewport--lg) {
+      padding-top: 443px;
+    }
+
+    &::before {
+      position: absolute;
+      top: -95px;
+      left: 17px;
+      content: "";
+      width: 423px;
+      height: 423px;
+      border-radius: 50%;
+      border: 28px solid $color-border-blue;
+      background-color: $color-light-blue-bg;
+
+      @media (max-width: $viewport--lg) {
+        top: 17px;
+        left: 0;
+      }
+    }
+
+    & img {
+      position: absolute;
+      top: calc(47% - 103px);
+      left: calc(50% - 80.5px);
+
+      @media (max-width: $viewport--lg) {
+        top: calc(44% - 103px);
+        left: calc(48% - 80.5px);
+
+        width: 171px;
+        height: 186px;
+      }
+    }
+
+    & button {
+      display: flex;
+      justify-content: center;
+      align-self: flex-end;
+      margin-bottom: 24px;
+      max-width: 271px;
+      width: 100%;
+      transform: translateX(14px);
+
+      @media (max-width: $viewport--lg) {
+        display: none;
+      }
+    }
+
+    @media (max-width: $viewport--lg) {
+      order: 3;
+    }
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-top: 0;
+
+    & h2 {
+      letter-spacing: 0;
+      text-align: center;
+    }
+
+    @media (max-width: $viewport--lg) {
+      order: 2;
+      margin-top: 27px;
+      margin-left: unset;
+
+      & p {
+        padding-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.main-index {
+  padding-top: 100px;
+
+  h1 {
+    font-size: 52px;
+    line-height: 68px;
+    color: $font-color-orange;
+    letter-spacing: -1.4px;
+  }
+
+  a {
+    transition: color $transition-settings;
+
+    &:hover,
+    &:focus {
+      color: $font-color-orange;
+    }
+  }
+}
+
+.bac {
+  background-color: $color-overlay;
+  padding: 20px;
+}
+
+.back-cream-colored{
+  background-color: $bg-cream;
+  padding: 30px;
+}

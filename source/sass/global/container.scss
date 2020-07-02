@@ -1,0 +1,38 @@
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 20.1%;
+
+  @media (min-width: 1920px + 1px) {
+    padding: 0 385px;
+  }
+
+  @media (max-width: 1600px) {
+    padding: 0 15%;
+  }
+
+  @media (max-width: $viewport--xl) {
+    padding: 0 10%;
+  }
+
+  @media (max-width: 1240px) {
+    padding: 0 3%;
+  }
+
+  @media (max-width: $viewport--lg) {
+    padding: 0 80px;
+  }
+
+  @media (max-width: $viewport--md) {
+    padding: 0 80px;
+  }
+
+  @media (max-width: 540px) {
+    padding: 0 30px;
+  }
+
+  @media (max-width: 360px) {
+    padding: 0 10px;
+  }
+}

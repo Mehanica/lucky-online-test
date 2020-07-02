@@ -1,0 +1,65 @@
+.advantage-block {
+  display: flex;
+  padding: 12px 2% 12px 7%;
+  margin-bottom: 17px;
+
+  background-color: $color-white;
+  border-radius: 4px;
+  cursor: pointer;
+
+  @media (max-width: $viewport--md) {
+    padding: 12px 2% 17px 5%;
+    margin-bottom: 10px;
+  }
+
+  &:first-child span {
+    margin-left: 7px;
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+
+    margin-right: 6px;
+    width: 46px;
+    height: 46px;
+
+    border: 1px solid $color-green;
+    border-radius: 50%;
+    background-color: $color-green;
+
+    @media (max-width: $viewport--md) {
+      margin-right: 6%;
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  &__content {
+    width: 84%;
+
+    @media (max-width: $viewport--md) {
+      width: 80%;
+    }
+
+    & p {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    & span {
+      color: $color-red;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 4px 4px $color-opacity-black;
+    transition: box-shadow $transition-settings;
+    .advantage-block__image {
+      border: 1px solid $color-black;
+      transition: border $transition-settings;
+    }
+  }
+}

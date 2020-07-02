@@ -1,0 +1,50 @@
+.special-price {
+  margin-top: 60px;
+
+  & h2 {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+
+    color: $font-color-default;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 25px;
+    text-transform: unset;
+
+    @media (max-width: $viewport--md) {
+      padding: 0;
+      font-size: 24px;
+      line-height: 23px;
+    }
+  }
+
+  & p {
+    margin-top: 12px;
+    padding-right: 10px;
+
+    color: $color-red;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 46px;
+    text-align: center;
+
+    @media (max-width: $viewport--md) {
+      margin-top: 13px;
+      padding-right: 27px;
+    }
+  }
+
+  & p:last-of-type {
+    color: $font-color-default;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 29px;
+    text-align: center;
+    text-decoration-line: line-through;
+
+    @media (max-width: $viewport--md) {
+      padding-right: 2px;
+    }
+  }
+}

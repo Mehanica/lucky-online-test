@@ -1,0 +1,87 @@
+extends ../layout/page-layout
+
+block data
+  include ../data/input-data
+
+
+block variables
+  - var title = 'Дезинтекс'
+  //- - var header = true
+  - var headerMod = 'all-pages'
+  //- - var footer = true
+
+
+block main
+  main.page-main
+    h1.visually-hidden Дезинтекс-дезинфицирующий концентрат
+    section.main-intro
+      .main-intro__wrap.container
+        .main-intro__inner
+          .main-intro__logo-wrap
+            a.main-intro__logo
+              img(src="img/logo.svg")
+              |Дезинтекс
+            span Дезинфицирующий концентрат
+          h2 Защитите свой дом от&nbsp;микробов и вирусов
+          .main-intro__content
+            .main-intro__image-wrap
+              +img(`content`, `bottles`, `png`, 270, 390, `фото дезинтекс в бутылочках`)
+            .main-intro__advantages
+              +advantage-block()
+                p Уничтожает до
+                  span 100%
+                  |опасных микроорганизмов
+              +advantage-block()
+                span Защищает поверхность до&nbsp;48 часов
+              +advantage-block()
+                p
+                  span Абсолютно безопасен
+                  |для человека и животных
+        aside.aside
+          +count-down-clock()
+          .aside__price.special-price
+            h2 Специальная цена
+            p 149₽
+            p 1901₽
+          form(action="post")
+            +custom-input('select', selectCountry)
+            +custom-input('text', nameInput)
+            +custom-input('tel', phone)
+            +btn('btn--size-md btn--orange', 'submit', 'Заказать', 'Заказать')
+    section.promo
+      .promo__inner.container
+        +count-down-clock()
+        .promo__center-block
+          +img(`content`, `small-bottles`, `png`, 191, 206, `фото дезинтекс в бутылочках`)
+          +btn('btn--size-md btn--orange', 'submit', 'Заказать', 'Заказать')
+        .promo__price.special-price
+          h2 Специальная цена
+          p 149₽
+          p 1901₽
+    section.usage-gallery.container
+      .usage-gallery__inner
+        h2 «Дезинтекс» подходит
+          span для дезинфекции любых поверхностей
+        .usage-gallery__center-image-mobile
+          +img(`content`, `bottle`, `png`, 68, 203, `фото бутылочки дезинтекс`)
+        .usage-gallery__slider.js-carousel-navigation-mod
+          ul.swiper-wrapper
+            li.swiper-slide
+              +img(`content`, `floor`, `jpg`, 148, 148, `фото пола`)
+              span Пол
+            li.swiper-slide
+              +img(`content`, `furniture`, `jpg`, 148, 148, `фото мебели`)
+              span Мебель
+            li.swiper-slide
+              +img(`content`, `other-equipment`, `jpg`, 148, 148, `фото различных приборов и оборудования`)
+              span Различные приборы и&nbsp;оборудование
+            li.swiper-slide
+              +img(`content`, `floor-doors`, `jpg`, 148, 148, `фото двери и ручки`)
+              span Стены, двери и&nbsp;дверные ручки
+            li.usage-gallery__center-image
+              +img(`content`, `bottle`, `png`, 96, 286, `фото бутылочки дезинтекс`)
+            li.swiper-slide
+              +img(`content`, `toilet`, `jpg`, 148, 148, `фото санузла`)
+              span Санузел
+          .js-carousel-navigation-mod-pagination
+

@@ -1,0 +1,21 @@
+extends ../layout/page-layout
+
+block variables
+  - var title = 'Index'
+
+block main
+  -
+    var pages = [
+      {
+        name: 'Дезинтекс --- dezintex.html',
+        src: 'dezintex.html'
+      }
+    ]
+
+  main.container.main-index
+    h1 Тестовое задание Lucky-online
+    h2 Список страниц
+    ol
+      each page in pages
+        li
+          a(href= page.src)= page.name

@@ -1,0 +1,57 @@
+html,
+body {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  font-family: $font-family--gotham-pro;
+  color: $font-color-default;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+
+  font-style: normal;
+  font-weight: 600;
+  color: $font-color-title;
+}
+
+h1,
+h2 {
+  font-size: 52px;
+  line-height: 68px;
+  letter-spacing: -1.4px;
+
+  @media (max-width: $viewport--xl) {
+    font-size: 46px;
+    line-height: 58px;
+    letter-spacing: -1.2px;
+  }
+
+  @media (max-width: $viewport--lg) {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -1px;
+  }
+
+  @media (max-width: $viewport--md) {
+    font-size: 21px;
+    line-height: 30px;
+    letter-spacing: -0.6px;
+  }
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}

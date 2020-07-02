@@ -1,0 +1,72 @@
+mixin custom-input(type, data, state)
+
+  case type
+    when 'text'
+      div(class='custom-input custom-input--text ' + data.className)
+        label
+          span.visually-hidden= data.label
+          if(!data.required)
+            input(type='text', name= data.name, placeholder= data.placeholder)
+          else
+            input(type='text', name= data.name, placeholder= data.placeholder, required)
+          .placeholder= data.placeholder
+            span.asterisk= ' *'
+        span.custom-input__error Поле, обязательное для ввода
+    when 'tel'
+      div(class='custom-input custom-input--text js-tel ' + data.className)
+        label
+          span.visually-hidden= data.label
+          if(!data.required)
+            input(type='text', name= data.name, placeholder= data.placeholder, minlength= data.minLength, inputmode='tel')
+          else
+            input(type='text', name= data.name, minlength= data.minLength, inputmode='tel', placeholder= data.placeholder, required)
+          .placeholder= data.placeholder
+            span.asterisk= ' *'
+        span.custom-input__error Поле, обязательное для ввода
+    when 'select'
+      if(!state)
+        div(class='custom-input custom-input--select js-select ' + data.className)
+          label(for= data.id)
+            span.visually-hidden= data.label
+          .custom-input__wrapper
+            input(type='text', id= data.id, name= data.name, placeholder= data.label, value= data.value readonly)
+            +icon('arrow-down', 12, 7)
+            ul.custom-input__list
+              each el in data.list
+                li(tabindex='0')= el
+          span.custom-input__error Поле, обязательное для ввода
+      else
+        div(class='custom-input custom-input--select js-select ' + data.className)
+          label(for= data.id)
+            span.visually-hidden= data.label
+          .custom-input__wrapper
+            input(type='text', id= data.id, name= data.name, placeholder= data.label, value= data.value readonly disabled)
+            +icon('arrow-down', 12, 7)
+            ul.custom-input__list
+              each el in data.list
+                li(tabindex='0')= el
+          span.custom-input__error Поле, обязательное для ввода
+    when 'select-atr'
+      if(!state)
+        div(class='custom-input custom-input--select js-select ' + data.className)
+          label(for= data.id)
+            span.visually-hidden= data.label
+          .custom-input__wrapper
+            input(type='text', id= data.id, name= data.name, placeholder= data.label, value= data.value readonly)
+            +icon('arrow-down', 12, 7)
+            ul.custom-input__list
+              each el in data.list
+                li(tabindex='0', data-clinic= el.atr)= el.title
+          span.custom-input__error Поле, обязательное для ввода
+      else
+        div(class='custom-input custom-input--select js-select ' + data.className)
+          label(for= data.id)
+            span.visually-hidden= data.label
+          .custom-input__wrapper
+            input(type='text', id= data.id, name= data.name, placeholder= data.label, value= data.value readonly disabled)
+            +icon('arrow-down', 12, 7)
+            ul.custom-input__list
+              each el in data.list
+                li(tabindex='0', data-clinic= el.atr)= el.title
+          span.custom-input__error Поле, обязательное для ввода
+

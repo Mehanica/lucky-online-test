@@ -1,0 +1,188 @@
+// Colors
+//---------------------------------
+
+// Base
+
+$color-black:                     #000000;
+$color-white:                     #ffffff;
+$color-light-bg:                  #f7f9fb;
+$color-green:                     #3aa48c;
+$color-deep-blue:                 #132a82;
+$color-red:                       #e85252;
+$color-red-deep:                  #e73c3c;
+$color-dark-red:                  #cf213a;
+$color-blue-bg:                   #d7f5ff;
+$color-light-blue-bg:             #def0f6;
+$color-border-blue:               #74e4f8;
+$color-dirty-blue-bg:             #d2e7eb;
+$color-gray:                      #c4c4c4;
+
+$color-opacity-black:              rgba($color-black, 0.25);
+
+$font-color-default:               rgba($color-black, 0.95);
+$font-color-white:                 $color-white; //#ffffff
+
+
+$color-brown:                     #493d36;
+$color-brown-2:                   #84736a;
+$color-light-brown:               #6d635d;
+$color-orange:                    #f7941e;
+$color-orange-deep:               #ef8200;
+$color-orange-light:              #ffefda;
+$color-dark-orange:               #655044;
+$color-gray-1:                    #b2aca8;
+$color-gray-2:                    #edeae9;
+$color-gray-3:                    #f1eeed;
+$color-gray-4:                    #faf9f9;
+$color-gray-5:                    #f8f7f6;
+$color-gray-6:                    #dbd8d7;
+$color-gray-7:                    #b3aca8;
+$color-gray-8:                    #e5e0de;
+$color-gray-9:                    #f8f7f7;
+$color-pink:                      #ffdedb;
+$color-light-pink:                #ffeae8;
+$color-light-green:               #dfedce;
+$color-turquoise:                 #b7e0e2;
+$color-light-turquoise:           #d9edef;
+$color-cream:                     #ffefda;
+$color-dark-cream:                #ffe7c8;
+$color-blue:                      #d9e8f3;
+$color-light-blue:                #e1ecf5;
+$color-beige:                     rgba(203, 237, 213, 0.46);
+$color-moderately-green:          rgba(212, 238, 219, 0.92);
+$color-forest-wolf:               #ebe6dd;
+$color-craiola:                   #d8e1ea;
+$color-error:                     #f7521e;
+$color-intro-background:          #655044;
+$color-transparent:               rgba(0, 0, 0, 0);
+$color-piter:                     #f1fafa;
+$color-light-piter:               #e8f7f7;
+// Socials
+
+$color-yt:                        #c4302b;
+$color-fb:                        #3b5998;
+$color-ig:                        #c13584;
+$color-vk:                        #4c75a3;
+
+// Socials
+
+$color-yt:                        #c4302b;
+$color-fb:                        #3b5998;
+$color-ig:                        #c13584;
+$color-vk:                        #4c75a3;
+$color-wp:                        #25d366;
+
+// With Opacity
+
+$color-opacity--gray-2:           rgba($color-gray-2, 0.6); // used $color-gray-2: #edeae9, opacity: 0.6
+$color-opacity--gray-2-70:           rgba($color-gray-2, 0.7); // used $color-gray-2: #edeae9, opacity: 0.6
+$color-opacity--gray-5:           rgba($color-gray-5, 0.7); // used $color-gray-5: #f8f7f6, opacity: 0.7
+$color-opacity--brown:            rgba($color-brown, 0.1); // used $color-light-brown: #493d36, opacity: 0.1
+$color-opacity--brown-2:            rgba($color-brown, 0.8); // used $color-light-brown: #493d36, opacity: 0.8
+$color-opacity--brown-3:            rgba($color-brown, 0.7); // used $color-light-brown: #493d36, opacity: 0.7
+$color-opacity--brown-4:            rgba($color-brown, 0.3); // used $color-light-brown: #493d36, opacity: 0.3
+
+$color-opacity--pink:             rgba($color-pink, 0.8); // used $color-pink: #ffdedb, opacity: 0.8
+$color-opacity--green:            rgba($color-green, 0.33); // used $color-green: #cde2b7, opacity: 0.33
+$color-opacity--light-green:      rgba($color-light-green, 0.8); // used $color-light-green: #e0eed0, opacity: 0.8
+$color-opacity--turquoise:        rgba($color-turquoise, 0.3); // used $color-turquoise: #b7e0e2, opacity: 0.3
+$color-opacity--light-turquoise:  rgba($color-light-turquoise, 0.8); // used $color-light-turquoise: #d9edef, opacity: 0.8
+$color-opacity--orange-light:     rgba($color-orange-light, 0.5); // used $color-orange: #ffefda, opacity: 0.5
+$color-opacity--orange:           rgba($color-orange, 0.15); // used $color-orange: #f7941e, opacity: 0.15
+$color-opacity--orange-2:         rgba($color-orange, 0.2); //used $color-orange: #f7941e, opacity: 0.2
+$color-opacity--wight:            rgba($color-white, 0.1); // used $color-orange: #ffffff, opacity: 0.1
+$color-opacity--gray-1:           rgba($color-gray-1, 0.2); // used $color-gray-1: #b3aca8, opacity: 0.2
+$color-opacity--dark-orange-1:    rgba($color-dark-orange, 0.02); // used $color-dark-orange: #655044, opacity: 0.02
+$color-opacity--dark-orange-2:    rgba($color-dark-orange, 0.04); // used $color-dark-orange: #655044, opacity: 0.04
+$color-opacity--dark-orange-3:    rgba($color-dark-orange, 0.1); //used $color-dark-orange: #655044, opacity: 0.1
+$color-opacity--dark-orange-4:    rgba($color-dark-orange, 0.05); //used $color-dark-orange: #655044, opacity: 0.05
+$color-yamsk:                     rgba(212, 238, 219, 0.58);
+$color-hosp:                      rgba(206, 223, 240, 0.46);
+$color-lahta:                     rgba(216, 239, 240, 0.39);
+
+// Used
+
+// Border
+
+$border-color:                     $color-opacity--gray-2; //rgba(237, 234, 233, 0.6)
+$border-input-color:               $color-gray-2; //#edeae9
+$border-input-focus:               $color-orange; //#f7941e
+$border-link:                      $color-opacity--gray-1; //rgba($color-gray-1, 0.2)
+$border-tab:                       $color-brown; //#493d36
+
+// Background
+
+$bg-white:                         $color-white; //#ffffff
+$bg-transparent:                   $color-transparent; // rgba(0, 0, 0, 0)
+$bg-card:                          $color-opacity--gray-5; //rgba(248, 247, 246, 0.7)
+$bg-cream:                         $color-cream; // #ffefda
+$bg-dark-cream:                    $color-dark-cream;
+$bg-pink:                          $color-light-pink; //#ffeae8
+$bg-btn-pink:                      $color-opacity--pink; // rgba(255, 222, 219, 0.8)
+$bg-green:                         $color-opacity--green; // rgba(205, 226, 183, 0.33)
+$bg-btn-green:                     $color-opacity--light-green; // rgba(223, 237, 206, 0.8)
+$bg-turquoise:                     $color-opacity--turquoise; // rgba(183, 224, 226, 0.3)
+$bg-btn-turquoise:                 $color-opacity--light-turquoise; // rgba(217, 237, 239, 0.8)
+$bg-orange:                        $color-orange; //#f7941e
+$bg-light-white:                   rgba($color-white, 0.42);
+$bg-gray:                          $color-opacity--gray-2; //rgba(237, 234, 233, 0.6)
+$bg-tag-gray:                      $color-gray-3; //#f1eeed
+$bg-white-opacity:                 $color-opacity--wight; //rgba($color-white, 0.1)
+$bg-blue:                          $color-blue;
+$bg-light-blue:                    $color-light-blue;
+$bg-beige:                         $color-beige;
+$bg-moderately-green:              $color-moderately-green;
+$bg-forest-wolf:                   $color-forest-wolf;
+$bg-craiola:                       $color-craiola;
+$bg-piter:                         $color-piter;
+$bg-sunny-piter:                   $color-light-piter;
+$bg-lahta:                         rgba(218, 241, 242, 0.36);
+$bg-small:                         $color-cream;
+$bg-dental:                        rgba(#b4cee6eb, 0.3);
+$bg-yamsk:                         rgba(205, 237, 214, 0.46);
+$bg-hosp:                          rgba(#b4cee6eb, 0.3);
+
+// Overlay
+
+$color-overlay:                    $color-opacity--brown; // rgba(73, 61, 54, 0.1)
+
+// Shadow
+
+$button-shadow:                    $color-opacity--orange; // rgba($color-orange, 0.15)
+
+// Font
+
+$font-color-default:               $color-light-brown; //#6d635d
+$font-color-title:                 $color-brown; //#493d36
+$font-color-light:                 $color-gray-1; //#b3aca8
+$font-color-lightest:              $color-brown-2; //84736a
+$font-color-orange:                $color-orange; //#f7941e
+
+$font-color-light-blue:            #1dc8ff;
+$font-color-blue:                  #2f80ed;
+
+// Font Family
+//---------------------------------
+
+$font-family--gotham-pro:          "Gotham Pro", "Arial", sans-serif;
+
+// Viewports
+//---------------------------------
+
+$viewport--sm:                     360px;
+$viewport--md:                     767px;
+$viewport--lg:                     1023px;
+$viewport--xl:                     1439px;
+$viewport--max:                    1920px;
+
+// Animation
+//---------------------------------
+
+$transition-settings:              0.3s ease;
+$modal-animation:                  0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+// Retina
+//---------------------------------
+
+$retina-dpi:                       144dpi;
+$retina-dppx:                      1.5dppx;

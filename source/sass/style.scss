@@ -1,0 +1,37 @@
+// Vendor
+//---------------------------------
+
+@import "vendor/normalize";
+@import "vendor/swiper";
+
+// Global
+//---------------------------------
+
+@import "variables";
+@import "mixins";
+@import "global/fonts";
+@import "global/typography";
+@import "global/reboot";
+@import "global/utils";
+@import "global/container";
+
+// Temporarily
+//---------------------------------
+
+@import "blocks/main-index.scss";
+
+// Blocks
+//---------------------------------
+
+// @import "blocks/header";
+// @import "blocks/footer";
+@import "blocks/main-intro.scss";
+@import "blocks/advantage-block.scss";
+@import "blocks/aside.scss";
+@import "blocks/count-down-clock.scss";
+@import "blocks/custom-input.scss";
+@import "blocks/btn";
+@import "blocks/special-price.scss";
+@import "blocks/promo.scss";
+@import "blocks/usage-gallery.scss";
+
